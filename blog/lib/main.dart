@@ -7,11 +7,11 @@ class MyApp extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-            primarySwatch: Colors.blue,
-        ),
-        home: MyHomePage(title: 'Flutter Demo Home Page'),
+            title: 'Blog',
+            theme: ThemeData(
+                primarySwatch: Colors.blue,
+            ),
+            home: MyHomePage(title: 'Myeong.'),
         );
     }
 }
@@ -37,11 +37,19 @@ class _MyHomePageState extends State<MyHomePage> {
     @override
     Widget build(BuildContext context) {
         return Scaffold(
+            backgroundColor: Colors.white,
+            drawerScrimColor: Color(0x00000000),
             appBar: AppBar(
+                backgroundColor: Colors.white,
+                elevation: 0.0,
+                textTheme: TextTheme(
+                    title: TextStyle(fontSize: 20.0, color: Colors.black),
+                ),
                 title: Text(widget.title),
                 leading: Builder(
                     builder: (BuildContext context) {
                         return IconButton(
+                            color: Colors.black,
                             icon: const Icon(Icons.menu),
                             onPressed: () { Scaffold.of(context).openDrawer(); },
                             tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
@@ -49,54 +57,52 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                 ),
             ),
-            drawer: Drawer(
-                child: ListView(
-                    children: const <Widget>[
-                        Card(
-                            child: ListTile(
-                                leading: FlutterLogo(),
-                                title: Text('One-line with leading widget'),
+            drawer: SizedBox(
+                width: 10,
+                child: Drawer(
+                    elevation: 0.0,
+                    child: ListView(
+                        // padding: const EdgeInsets.all(12),
+                        children: <Widget>[
+                            DrawerHeader(
+                                child: new Text("DRAWER HEADER.."),
+                                decoration: new BoxDecoration(
+                                    color: Colors.black
+                                ),
                             ),
-                        ),
-                        Card(
-                            child: ListTile(
+                            ListTile(
                                 leading: FlutterLogo(),
-                                title: Text('One-line with leading widget'),
+                                title: Text('Home'),
                             ),
-                        ),
-                        Card(
-                            child: ListTile(
+                            ListTile(
                                 leading: FlutterLogo(),
-                                title: Text('One-line with leading widget'),
+                                title: Text('Archive'),
                             ),
-                        ),
-                        Card(
-                            child: ListTile(
+                            ListTile(
                                 leading: FlutterLogo(),
-                                title: Text('One-line with leading widget'),
+                                title: Text('About'),
                             ),
-                        ),
-                        Card(
-                            child: ListTile(
-                                leading: FlutterLogo(),
-                                title: Text('One-line with leading widget'),
-                            ),
-                        ),
-                    ],
-                )
+                        ],
+                    )
+                ),
             ),
             body: Center(
                 child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                    Text(
-                    'You have pushed the button this many times:',
-                    ),
-                    Text(
-                    '$_counter',
-                    style: Theme.of(context).textTheme.display1,
-                    ),
-                ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                        ListTile(
+                            leading: FlutterLogo(),
+                            title: Text('Title'),
+                        ),
+                        ListTile(
+                            leading: FlutterLogo(),
+                            title: Text('Title'),
+                        ),
+                        ListTile(
+                            leading: FlutterLogo(),
+                            title: Text('Title'),
+                        ),
+                    ],
                 ),
             ),
             floatingActionButton: FloatingActionButton(
