@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
             ),
             drawer: SizedBox(
-                width: 10,
+                width: 100,
                 child: Drawer(
                     elevation: 0.0,
                     child: ListView(
@@ -71,45 +71,73 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                             ),
                             ListTile(
-                                leading: FlutterLogo(),
+                                leading: Icon(Icons.home),
                                 title: Text('Home'),
                             ),
                             ListTile(
-                                leading: FlutterLogo(),
+                                leading: Icon(Icons.home),
                                 title: Text('Archive'),
                             ),
                             ListTile(
-                                leading: FlutterLogo(),
+                                leading: Icon(Icons.home),
                                 title: Text('About'),
                             ),
                         ],
                     )
                 ),
             ),
-            body: Center(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
+            body: ListView(
+                children: ListTile.divideTiles(
+                    context: context,
+                    tiles: [
                         ListTile(
                             leading: FlutterLogo(),
                             title: Text('Title'),
+                            subtitle: Text('A strong animal'),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 19.0),
+                            onTap: () {
+                                // do something
+                            },
                         ),
                         ListTile(
                             leading: FlutterLogo(),
                             title: Text('Title'),
+                            subtitle: Text('A strong animal'),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 19.0),
+                            onTap: () {
+                                // do something
+                            },
                         ),
                         ListTile(
                             leading: FlutterLogo(),
                             title: Text('Title'),
+                            subtitle: Text('A strong animal'),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 19.0),
+                            onTap: () {
+                                // do something
+                            },
                         ),
-                    ],
-                ),
-            ),
-            floatingActionButton: FloatingActionButton(
-                onPressed: _incrementCounter,
-                tooltip: 'Increment',
-                child: Icon(Icons.add),
-            ), // This trailing comma makes auto-formatting nicer for build methods.
+                        ListTile(
+                            leading: FlutterLogo(),
+                            title: Text('Title'),
+                            subtitle: Text('A strong animal'),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 19.0),
+                            onTap: () {
+                                // do something
+                            },
+                        ),
+                        ListTile(
+                            leading: FlutterLogo(),
+                            title: Text('Title'),
+                            subtitle: Text('A strong animal'),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 19.0),
+                            onTap: () {
+                                // do something
+                            },
+                        ),
+                    ]
+                ).toList(),
+            )
         );
     }
 }
