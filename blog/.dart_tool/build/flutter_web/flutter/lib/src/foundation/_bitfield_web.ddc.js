@@ -789,7 +789,7 @@ define(['dart_sdk', 'packages/typed_data/typed_buffers'], function(dart_sdk, pac
           node = node.parent;
         if (!!dart.equals(node, child)) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/node.dart", 127, 14, "node != child");
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/node.dart", 123, 12, "() {\n      AbstractNode node = this;\n      while (node.parent != null)\n        node = node.parent;\n      assert(node != child); // indicates we are about to create a cycle\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/node.dart", 123, 12, "() {\r\n      AbstractNode node = this;\r\n      while (node.parent != null)\r\n        node = node.parent;\r\n      assert(node != child); // indicates we are about to create a cycle\r\n      return true;\r\n    }()");
       child[_parent] = this;
       if (dart.test(this.attached)) child.attach(this[_owner]);
       this.redepthChild(child);
@@ -3174,7 +3174,7 @@ define(['dart_sdk', 'packages/typed_data/typed_buffers'], function(dart_sdk, pac
         if (!dart.test(dart.fn(() => {
           fullString = this.toDiagnosticsNode({style: diagnostics$.DiagnosticsTreeStyle.singleLine}).toString({minLevel: minLevel});
           return true;
-        }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/diagnostics.dart", 3094, 12, "() {\n      fullString = toDiagnosticsNode(style: DiagnosticsTreeStyle.singleLine).toString(minLevel: minLevel);\n      return true;\n    }()");
+        }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/diagnostics.dart", 3094, 12, "() {\r\n      fullString = toDiagnosticsNode(style: DiagnosticsTreeStyle.singleLine).toString(minLevel: minLevel);\r\n      return true;\r\n    }()");
         t3 = fullString;
         return t3 == null ? this.toStringShort() : t3;
       }
@@ -3587,7 +3587,7 @@ define(['dart_sdk', 'packages/typed_data/typed_buffers'], function(dart_sdk, pac
     if (!dart.test(dart.fn(() => {
       if (!dart.equals(print.debugPrint, debugPrintOverride) || platform.debugDefaultTargetPlatformOverride != null || debug.debugDoublePrecision != null) dart.throw(assertions.FlutterError.new(reason));
       return true;
-    }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/debug.dart", 25, 10, "() {\n    if (debugPrint != debugPrintOverride ||\n        debugDefaultTargetPlatformOverride != null ||\n        debugDoublePrecision != null)\n      throw FlutterError(reason);\n    return true;\n  }()");
+    }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/debug.dart", 25, 10, "() {\r\n    if (debugPrint != debugPrintOverride ||\r\n        debugDefaultTargetPlatformOverride != null ||\r\n        debugDoublePrecision != null)\r\n      throw FlutterError(reason);\r\n    return true;\r\n  }()");
     return true;
   };
   debug.debugInstrumentAction = function debugInstrumentAction(T, description, action) {
@@ -3596,7 +3596,7 @@ define(['dart_sdk', 'packages/typed_data/typed_buffers'], function(dart_sdk, pac
     if (!dart.test(dart.fn(() => {
       instrument = debug.debugInstrumentationEnabled;
       return true;
-    }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/debug.dart", 55, 10, "() {\n    instrument = debugInstrumentationEnabled;\n    return true;\n  }()");
+    }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/debug.dart", 55, 10, "() {\r\n    instrument = debugInstrumentationEnabled;\r\n    return true;\r\n  }()");
     if (dart.test(instrument)) {
       let stopwatch = (t3 = new core.Stopwatch.new(), t3.start(), t3);
       return action().whenComplete(dart.fn(() => {
@@ -4143,7 +4143,7 @@ define(['dart_sdk', 'packages/typed_data/typed_buffers'], function(dart_sdk, pac
       if (!dart.test(dart.fn(() => {
         reportError = true;
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/assertions.dart", 639, 12, "() {\n      // In checked mode, we ignore the \"silent\" flag.\n      reportError = true;\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/assertions.dart", 639, 12, "() {\r\n      // In checked mode, we ignore the \"silent\" flag.\r\n      reportError = true;\r\n      return true;\r\n    }()");
       if (!reportError && !dart.test(forceReport)) return;
       if (assertions.FlutterError._errorCount === 0 || dart.test(forceReport)) {
         print.debugPrint(new diagnostics$.TextTreeRenderer.new({wrapWidth: 100, wrapWidthProperties: 100, maxDescendentsTruncatableNode: 5}).render(details.toDiagnosticsNode({style: diagnostics$.DiagnosticsTreeStyle.error}))[$trimRight]());
@@ -4230,7 +4230,7 @@ define(['dart_sdk', 'packages/typed_data/typed_buffers'], function(dart_sdk, pac
         dart.throw(new assertions.FlutterError.fromParts(message));
       }
       return true;
-    }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/assertions.dart", 545, 12, "() {\n      final Iterable<DiagnosticsNode> summaries = diagnostics.where((DiagnosticsNode node) => node.level == DiagnosticLevel.summary);\n      if (summaries.length > 1) {\n        final List<DiagnosticsNode> message = <DiagnosticsNode>[\n          ErrorSummary('FlutterError contained multiple error summaries.'),\n          ErrorDescription(\n            'All FlutterError objects should have only a single short '\n            '(one line) summary description of the problem that was '\n            'detected.'\n          ),\n          DiagnosticsProperty<FlutterError>('Malformed', this, expandableValue: true, showSeparator: false, style: DiagnosticsTreeStyle.whitespace),\n          ErrorDescription('\\nThe malformed error has ${summaries.length} summaries.'),\n        ];\n        int i = 1;\n        for (DiagnosticsNode summary in summaries) {\n          message.add(DiagnosticsProperty<DiagnosticsNode>('Summary $i', summary, expandableValue : true));\n          i += 1;\n        }\n        message.add(ErrorDescription(\n          '\\nThis error should still help you solve your problem, '\n          'however please also report this malformed error in the '\n          'framework by filing a bug on GitHub:\\n'\n          '  https://github.com/flutter/flutter/issues/new?template=BUG.md'\n        ));\n        throw FlutterError.fromParts(message);\n      }\n      return true;\n    }()");
+    }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/assertions.dart", 545, 12, "() {\r\n      final Iterable<DiagnosticsNode> summaries = diagnostics.where((DiagnosticsNode node) => node.level == DiagnosticLevel.summary);\r\n      if (summaries.length > 1) {\r\n        final List<DiagnosticsNode> message = <DiagnosticsNode>[\r\n          ErrorSummary('FlutterError contained multiple error summaries.'),\r\n          ErrorDescription(\r\n            'All FlutterError objects should have only a single short '\r\n            '(one line) summary description of the problem that was '\r\n            'detected.'\r\n          ),\r\n          DiagnosticsProperty<FlutterError>('Malformed', this, expandableValue: true, showSeparator: false, style: DiagnosticsTreeStyle.whitespace),\r\n          ErrorDescription('\\nThe malformed error has ${summaries.length} summaries.'),\r\n        ];\r\n        int i = 1;\r\n        for (DiagnosticsNode summary in summaries) {\r\n          message.add(DiagnosticsProperty<DiagnosticsNode>('Summary $i', summary, expandableValue : true));\r\n          i += 1;\r\n        }\r\n        message.add(ErrorDescription(\r\n          '\\nThis error should still help you solve your problem, '\r\n          'however please also report this malformed error in the '\r\n          'framework by filing a bug on GitHub:\\n'\r\n          '  https://github.com/flutter/flutter/issues/new?template=BUG.md'\r\n        ));\r\n        throw FlutterError.fromParts(message);\r\n      }\r\n      return true;\r\n    }()");
   }).prototype = assertions.FlutterError.prototype;
   dart.addTypeTests(assertions.FlutterError);
   assertions.FlutterError[dart.implements] = () => [core.AssertionError];
@@ -4390,14 +4390,14 @@ define(['dart_sdk', 'packages/typed_data/typed_buffers'], function(dart_sdk, pac
       if (!dart.test(dart.fn(() => {
         binding.BindingBase._debugInitialized = true;
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 101, 12, "() {\n      _debugInitialized = true;\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 101, 12, "() {\r\n      _debugInitialized = true;\r\n      return true;\r\n    }()");
     }
     initServiceExtensions() {
       if (!!dart.test(binding.BindingBase._debugServiceExtensionsRegistered)) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 128, 12, "!_debugServiceExtensionsRegistered");
       if (!dart.test(dart.fn(() => {
         this.registerSignalServiceExtension({name: "reassemble", callback: dart.bind(this, 'reassembleApplication')});
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 130, 12, "() {\n      registerSignalServiceExtension(\n        name: 'reassemble',\n        callback: reassembleApplication,\n      );\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 130, 12, "() {\r\n      registerSignalServiceExtension(\r\n        name: 'reassemble',\r\n        callback: reassembleApplication,\r\n      );\r\n      return true;\r\n    }()");
       if (!false && !true) {
         this.registerSignalServiceExtension({name: "exit", callback: C49 || CT.C49});
         this.registerServiceExtension({name: "saveCompilationTrace", callback: dart.fn(parameters => async.async(MapOfString$dynamic(), function*() {
@@ -4435,11 +4435,11 @@ define(['dart_sdk', 'packages/typed_data/typed_buffers'], function(dart_sdk, pac
             return new (IdentityMapOfString$dynamic()).from(["value", dart.toString(platform.defaultTargetPlatform)[$substring]((dart.str(dart.wrapType(platform.TargetPlatform)) + ".").length)]);
           }).bind(this)), MapOfString$StringToFutureOfMapOfString$dynamic())});
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 153, 12, "() {\n      const String platformOverrideExtensionName = 'platformOverride';\n      registerServiceExtension(\n        name: platformOverrideExtensionName,\n        callback: (Map<String, String> parameters) async {\n          if (parameters.containsKey('value')) {\n            switch (parameters['value']) {\n              case 'android':\n                debugDefaultTargetPlatformOverride = TargetPlatform.android;\n                break;\n              case 'iOS':\n                debugDefaultTargetPlatformOverride = TargetPlatform.iOS;\n                break;\n              case 'fuchsia':\n                debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;\n                break;\n              case 'default':\n              default:\n                debugDefaultTargetPlatformOverride = null;\n            }\n            _postExtensionStateChangedEvent(\n              platformOverrideExtensionName,\n              defaultTargetPlatform.toString().substring('$TargetPlatform.'.length),\n            );\n            await reassembleApplication();\n          }\n          return <String, dynamic>{\n            'value': defaultTargetPlatform\n                     .toString()\n                     .substring('$TargetPlatform.'.length),\n          };\n        },\n      );\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 153, 12, "() {\r\n      const String platformOverrideExtensionName = 'platformOverride';\r\n      registerServiceExtension(\r\n        name: platformOverrideExtensionName,\r\n        callback: (Map<String, String> parameters) async {\r\n          if (parameters.containsKey('value')) {\r\n            switch (parameters['value']) {\r\n              case 'android':\r\n                debugDefaultTargetPlatformOverride = TargetPlatform.android;\r\n                break;\r\n              case 'iOS':\r\n                debugDefaultTargetPlatformOverride = TargetPlatform.iOS;\r\n                break;\r\n              case 'fuchsia':\r\n                debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;\r\n                break;\r\n              case 'default':\r\n              default:\r\n                debugDefaultTargetPlatformOverride = null;\r\n            }\r\n            _postExtensionStateChangedEvent(\r\n              platformOverrideExtensionName,\r\n              defaultTargetPlatform.toString().substring('$TargetPlatform.'.length),\r\n            );\r\n            await reassembleApplication();\r\n          }\r\n          return <String, dynamic>{\r\n            'value': defaultTargetPlatform\r\n                     .toString()\r\n                     .substring('$TargetPlatform.'.length),\r\n          };\r\n        },\r\n      );\r\n      return true;\r\n    }()");
       if (!dart.test(dart.fn(() => {
         binding.BindingBase._debugServiceExtensionsRegistered = true;
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 188, 12, "() {\n      _debugServiceExtensionsRegistered = true;\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 188, 12, "() {\r\n      _debugServiceExtensionsRegistered = true;\r\n      return true;\r\n    }()");
     }
     get locked() {
       return dart.notNull(this[_lockCount]) > 0;
@@ -4541,7 +4541,7 @@ define(['dart_sdk', 'packages/typed_data/typed_buffers'], function(dart_sdk, pac
         if (!dart.test(dart.fn(() => {
           if (dart.test(debug.debugInstrumentationEnabled)) print.debugPrint("service extension method received: " + dart.str(method) + "(" + dart.str(parameters) + ")");
           return true;
-        }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 494, 14, "() {\n        if (debugInstrumentationEnabled)\n          debugPrint('service extension method received: $method($parameters)');\n        return true;\n      }()");
+        }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/binding.dart", 494, 14, "() {\r\n        if (debugInstrumentationEnabled)\r\n          debugPrint('service extension method received: $method($parameters)');\r\n        return true;\r\n      }()");
         yield debug.debugInstrumentAction(dart.void, "Wait for outer event loop", dart.fn(() => FutureOfvoid().delayed(core.Duration.zero), VoidToFutureOfvoid()));
         let caughtException = null;
         let caughtStack = null;
@@ -5082,7 +5082,7 @@ define(['dart_sdk', 'packages/typed_data/typed_buffers'], function(dart_sdk, pac
           dart.throw(new assertions.FlutterError.fromParts(JSArrayOfDiagnosticsNode().of([new assertions.ErrorSummary.new("A " + dart.str(this[$runtimeType]) + " was used after being disposed."), new assertions.ErrorDescription.new("Once you have called dispose() on a " + dart.str(this[$runtimeType]) + ", it can no longer be used.")])));
         }
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/change_notifier.dart", 103, 12, "() {\n      if (_listeners == null) {\n        throw FlutterError.fromParts(<DiagnosticsNode>[\n          ErrorSummary('A $runtimeType was used after being disposed.'),\n          ErrorDescription('Once you have called dispose() on a $runtimeType, it can no longer be used.')\n        ]);\n      }\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/foundation/change_notifier.dart", 103, 12, "() {\r\n      if (_listeners == null) {\r\n        throw FlutterError.fromParts(<DiagnosticsNode>[\r\n          ErrorSummary('A $runtimeType was used after being disposed.'),\r\n          ErrorDescription('Once you have called dispose() on a $runtimeType, it can no longer be used.')\r\n        ]);\r\n      }\r\n      return true;\r\n    }()");
       return true;
     }
     get hasListeners() {

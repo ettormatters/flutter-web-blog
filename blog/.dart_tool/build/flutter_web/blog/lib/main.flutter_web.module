@@ -1,1 +1,1 @@
-{"p":["blog","lib/main.dart"],"s":[["blog","lib/main.dart"]],"d":[["flutter","lib/material.dart"]],"m":false,"is":true,"pf":"flutter_web"}
+{"p":["blog","lib/main.dart"],"s":[["blog","lib/main.dart"]],"d":[["flutter","lib/material.dart"],["flutter_markdown","lib/flutter_markdown.dart"],["markdown","lib/markdown.dart"]],"m":false,"is":false,"pf":"flutter_web"}

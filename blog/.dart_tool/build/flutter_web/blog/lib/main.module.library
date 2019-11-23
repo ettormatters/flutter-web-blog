@@ -1,1 +1,1 @@
-{"isEntrypoint":true,"deps":["flutter|lib/material.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":true}
+{"isEntrypoint":true,"deps":["flutter|lib/material.dart","flutter_markdown|lib/flutter_markdown.dart","markdown|lib/markdown.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":["async","io"],"hasMain":true}

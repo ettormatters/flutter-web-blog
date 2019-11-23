@@ -6639,7 +6639,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
             this.evict(value);
           }).bind(this)), StringToFutureOfNull())});
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/binding.dart", 122, 12, "() {\n      registerStringServiceExtension(\n        // ext.flutter.evict value=foo.png will cause foo.png to be evicted from\n        // the rootBundle cache and cause the entire image cache to be cleared.\n        // This is used by hot reload mode to clear out the cache of resources\n        // that have changed.\n        name: 'evict',\n        getter: () async => '',\n        setter: (String value) async {\n          evict(value);\n        },\n      );\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/binding.dart", 122, 12, "() {\r\n      registerStringServiceExtension(\r\n        // ext.flutter.evict value=foo.png will cause foo.png to be evicted from\r\n        // the rootBundle cache and cause the entire image cache to be cleared.\r\n        // This is used by hot reload mode to clear out the cache of resources\r\n        // that have changed.\r\n        name: 'evict',\r\n        getter: () async => '',\r\n        setter: (String value) async {\r\n          evict(value);\r\n        },\r\n      );\r\n      return true;\r\n    }()");
     }
     evict(asset) {
       asset_bundle.rootBundle.evict(asset);
@@ -6766,7 +6766,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
           dart.throw(assertions.FlutterError.new("ServicesBinding.defaultBinaryMessenger was accessed before the " + "binding was initialized.\n" + "If you're running an application and need to access the binary " + "messenger before `runApp()` has been called (for example, during " + "plugin initialization), then you need to explicitly call the " + "`WidgetsFlutterBinding.ensureInitialized()` first.\n" + "If you're running a test, you can call the " + "`TestWidgetsFlutterBinding.ensureInitialized()` as the first line in " + "your test's `main()` method to initialize the binding."));
         }
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/binary_messenger.dart", 74, 10, "() {\n    if (ServicesBinding.instance == null) {\n      throw FlutterError(\n        'ServicesBinding.defaultBinaryMessenger was accessed before the '\n        'binding was initialized.\\n'\n        'If you\\'re running an application and need to access the binary '\n        'messenger before `runApp()` has been called (for example, during '\n        'plugin initialization), then you need to explicitly call the '\n        '`WidgetsFlutterBinding.ensureInitialized()` first.\\n'\n        'If you\\'re running a test, you can call the '\n        '`TestWidgetsFlutterBinding.ensureInitialized()` as the first line in '\n        'your test\\'s `main()` method to initialize the binding.'\n      );\n    }\n    return true;\n  }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/binary_messenger.dart", 74, 10, "() {\r\n    if (ServicesBinding.instance == null) {\r\n      throw FlutterError(\r\n        'ServicesBinding.defaultBinaryMessenger was accessed before the '\r\n        'binding was initialized.\\n'\r\n        'If you\\'re running an application and need to access the binary '\r\n        'messenger before `runApp()` has been called (for example, during '\r\n        'plugin initialization), then you need to explicitly call the '\r\n        '`WidgetsFlutterBinding.ensureInitialized()` first.\\n'\r\n        'If you\\'re running a test, you can call the '\r\n        '`TestWidgetsFlutterBinding.ensureInitialized()` as the first line in '\r\n        'your test\\'s `main()` method to initialize the binding.'\r\n      );\r\n    }\r\n    return true;\r\n  }()");
       return binding$.ServicesBinding.instance.defaultBinaryMessenger;
     }
   });
@@ -7031,7 +7031,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
             print.debugPrint(prefix + dart.str(this) + " calling " + dart.str(name) + " callback." + (dart.equals((t9 = report, t9 == null ? null : t9[$isNotEmpty]), true) ? " " + dart.str(report) : ""));
           }
           return true;
-        }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/recognizer.dart", 172, 14, "() {\n        if (debugPrintRecognizerCallbacksTrace) {\n          final String report = debugReport != null ? debugReport() : null;\n          // The 19 in the line below is the width of the prefix used by\n          // _debugLogDiagnostic in arena.dart.\n          final String prefix = debugPrintGestureArenaDiagnostics ? ' ' * 19 + '❙ ' : '';\n          debugPrint('$prefix$this calling $name callback.${ report?.isNotEmpty == true ? \" $report\" : \"\" }');\n        }\n        return true;\n      }()");
+        }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/recognizer.dart", 172, 14, "() {\r\n        if (debugPrintRecognizerCallbacksTrace) {\r\n          final String report = debugReport != null ? debugReport() : null;\r\n          // The 19 in the line below is the width of the prefix used by\r\n          // _debugLogDiagnostic in arena.dart.\r\n          final String prefix = debugPrintGestureArenaDiagnostics ? ' ' * 19 + '❙ ' : '';\r\n          debugPrint('$prefix$this calling $name callback.${ report?.isNotEmpty == true ? \" $report\" : \"\" }');\r\n        }\r\n        return true;\r\n      }()");
         result = callback();
       } catch (e) {
         let exception = dart.getThrown(e);
@@ -9304,7 +9304,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
         if (!dart.test(dart.fn(() => {
           if (dart.test(debug.debugPrintHitTestResults)) print.debugPrint(dart.str(event) + ": " + dart.str(hitTestResult));
           return true;
-        }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/binding.dart", 132, 14, "() {\n        if (debugPrintHitTestResults)\n          debugPrint('$event: $hitTestResult');\n        return true;\n      }()");
+        }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/binding.dart", 132, 14, "() {\r\n        if (debugPrintHitTestResults)\r\n          debugPrint('$event: $hitTestResult');\r\n        return true;\r\n      }()");
       } else if (events.PointerUpEvent.is(event) || events.PointerCancelEvent.is(event)) {
         hitTestResult = this[_hitTests][$remove](event.pointer);
       } else if (dart.test(event.down)) {
@@ -9313,7 +9313,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
       if (!dart.test(dart.fn(() => {
         if (dart.test(debug.debugPrintMouseHoverEvents) && events.PointerHoverEvent.is(event)) print.debugPrint(dart.str(event));
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/binding.dart", 147, 12, "() {\n      if (debugPrintMouseHoverEvents && event is PointerHoverEvent)\n        debugPrint('$event');\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/binding.dart", 147, 12, "() {\r\n      if (debugPrintMouseHoverEvents && event is PointerHoverEvent)\r\n        debugPrint('$event');\r\n      return true;\r\n    }()");
       if (hitTestResult != null || events.PointerHoverEvent.is(event) || events.PointerAddedEvent.is(event) || events.PointerRemovedEvent.is(event)) {
         this.dispatchEvent(event, hitTestResult);
       }
@@ -9555,7 +9555,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
     }
     pushTransform(transform) {
       if (!(transform != null)) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/hit_test.dart", 135, 12, "transform != null");
-      if (!(dart.test(this[_debugVectorMoreOrLessEquals](transform.getRow(2), vector_math_64.Vector4.new(0.0, 0.0, 1.0, 0.0))) && dart.test(this[_debugVectorMoreOrLessEquals](transform.getColumn(2), vector_math_64.Vector4.new(0.0, 0.0, 1.0, 0.0))))) dart.assertFailed("The third row and third column of a transform matrix for pointer " + "events must be Vector4(0, 0, 1, 0) to ensure that a transformed " + "point is directly under the pointer device. Did you forget to run the paint " + "matrix through PointerEvent.removePerspectiveTransform?" + "The provided matrix is:\n" + dart.str(transform), "org-dartlang-app:///packages/flutter/src/gestures/hit_test.dart", 137, 7, "_debugVectorMoreOrLessEquals(transform.getRow(2), Vector4(0, 0, 1, 0)) &&\n      _debugVectorMoreOrLessEquals(transform.getColumn(2), Vector4(0, 0, 1, 0))");
+      if (!(dart.test(this[_debugVectorMoreOrLessEquals](transform.getRow(2), vector_math_64.Vector4.new(0.0, 0.0, 1.0, 0.0))) && dart.test(this[_debugVectorMoreOrLessEquals](transform.getColumn(2), vector_math_64.Vector4.new(0.0, 0.0, 1.0, 0.0))))) dart.assertFailed("The third row and third column of a transform matrix for pointer " + "events must be Vector4(0, 0, 1, 0) to ensure that a transformed " + "point is directly under the pointer device. Did you forget to run the paint " + "matrix through PointerEvent.removePerspectiveTransform?" + "The provided matrix is:\n" + dart.str(transform), "org-dartlang-app:///packages/flutter/src/gestures/hit_test.dart", 137, 7, "_debugVectorMoreOrLessEquals(transform.getRow(2), Vector4(0, 0, 1, 0)) &&\r\n      _debugVectorMoreOrLessEquals(transform.getColumn(2), Vector4(0, 0, 1, 0))");
       this[_transforms].add(vector_math_64.Matrix4._check(dart.test(this[_transforms][$isEmpty]) ? transform : transform['*'](this[_transforms][$last])));
     }
     popTransform() {
@@ -9569,7 +9569,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
         let difference = a['-'](b);
         result = difference.storage[$every](dart.fn(component => component[$abs]() < dart.notNull(epsilon), doubleTobool()));
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/hit_test.dart", 169, 12, "() {\n      final Vector4 difference = a - b;\n      result = difference.storage.every((double component) => component.abs() < epsilon);\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/hit_test.dart", 169, 12, "() {\r\n      final Vector4 difference = a - b;\r\n      result = difference.storage.every((double component) => component.abs() < epsilon);\r\n      return true;\r\n    }()");
       return result;
     }
     toString() {
@@ -9609,7 +9609,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
     if (!dart.test(dart.fn(() => {
       if (dart.test(debug.debugPrintHitTestResults) || dart.test(debug.debugPrintGestureArenaDiagnostics) || dart.test(debug.debugPrintRecognizerCallbacksTrace)) dart.throw(assertions.FlutterError.new(reason));
       return true;
-    }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/debug.dart", 60, 10, "() {\n    if (debugPrintHitTestResults ||\n        debugPrintGestureArenaDiagnostics ||\n        debugPrintRecognizerCallbacksTrace)\n      throw FlutterError(reason);\n    return true;\n  }()");
+    }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/debug.dart", 60, 10, "() {\r\n    if (debugPrintHitTestResults ||\r\n        debugPrintGestureArenaDiagnostics ||\r\n        debugPrintRecognizerCallbacksTrace)\r\n      throw FlutterError(reason);\r\n    return true;\r\n  }()");
     return true;
   };
   dart.defineLazy(debug, {
@@ -9952,7 +9952,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
           print.debugPrint("Gesture arena " + dart.toString(pointer)[$padRight](4) + " ❙ " + dart.str(message) + (count != null ? " with " + dart.str(count) + " member" + s + "." : ""));
         }
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/arena.dart", 267, 12, "() {\n      if (debugPrintGestureArenaDiagnostics) {\n        final int count = state != null ? state.members.length : null;\n        final String s = count != 1 ? 's' : '';\n        debugPrint('Gesture arena ${pointer.toString().padRight(4)} ❙ $message${ count != null ? \" with $count member$s.\" : \"\"}');\n      }\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/arena.dart", 267, 12, "() {\r\n      if (debugPrintGestureArenaDiagnostics) {\r\n        final int count = state != null ? state.members.length : null;\r\n        final String s = count != 1 ? 's' : '';\r\n        debugPrint('Gesture arena ${pointer.toString().padRight(4)} ❙ $message${ count != null ? \" with $count member$s.\" : \"\"}');\r\n      }\r\n      return true;\r\n    }()");
       return true;
     }
   };
@@ -10172,7 +10172,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
     this[primaryDelta$] = primaryDelta;
     this[globalPosition$1] = globalPosition;
     if (!(delta != null)) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/drag_details.dart", 137, 15, "delta != null");
-    if (!(primaryDelta == null || primaryDelta == delta.dx && delta.dy === 0.0 || primaryDelta == delta.dy && delta.dx === 0.0)) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/drag_details.dart", 138, 15, "primaryDelta == null\n           || (primaryDelta == delta.dx && delta.dy == 0.0)\n           || (primaryDelta == delta.dy && delta.dx == 0.0)");
+    if (!(primaryDelta == null || primaryDelta == delta.dx && delta.dy === 0.0 || primaryDelta == delta.dy && delta.dx === 0.0)) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/drag_details.dart", 138, 15, "primaryDelta == null\r\n           || (primaryDelta == delta.dx && delta.dy == 0.0)\r\n           || (primaryDelta == delta.dy && delta.dx == 0.0)");
     this[localPosition$2] = (t14 = localPosition, t14 == null ? globalPosition : t14);
     ;
   }).prototype = drag_details.DragUpdateDetails.prototype;
@@ -10212,7 +10212,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
     this[velocity$] = velocity;
     this[primaryVelocity$] = primaryVelocity;
     if (!(velocity != null)) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/drag_details.dart", 214, 15, "velocity != null");
-    if (!(primaryVelocity == null || primaryVelocity == velocity.pixelsPerSecond.dx || primaryVelocity == velocity.pixelsPerSecond.dy)) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/drag_details.dart", 215, 15, "primaryVelocity == null\n           || primaryVelocity == velocity.pixelsPerSecond.dx\n           || primaryVelocity == velocity.pixelsPerSecond.dy");
+    if (!(primaryVelocity == null || primaryVelocity == velocity.pixelsPerSecond.dx || primaryVelocity == velocity.pixelsPerSecond.dy)) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/drag_details.dart", 215, 15, "primaryVelocity == null\r\n           || primaryVelocity == velocity.pixelsPerSecond.dx\r\n           || primaryVelocity == velocity.pixelsPerSecond.dy");
     ;
   }).prototype = drag_details.DragEndDetails.prototype;
   dart.addTypeTests(drag_details.DragEndDetails);
@@ -13935,7 +13935,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
       if (!dart.test(dart.fn(() => {
         text_input.TextInputConnection._nextId = to;
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/text_input.dart", 687, 12, "() {\n      _nextId = to;\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/text_input.dart", 687, 12, "() {\r\n      _nextId = to;\r\n      return true;\r\n    }()");
     }
     get attached() {
       return dart.equals(text_input.TextInput._instance[_currentConnection], this);
@@ -14028,7 +14028,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
         let t14;
         text_input.TextInput._instance[_channel] = (t14 = newChannel, t14.setMethodCallHandler(dart.bind(text_input.TextInput._instance, _handleTextInputInvocation)), t14);
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/text_input.dart", 845, 12, "() {\n      _instance._channel = newChannel..setMethodCallHandler(_instance._handleTextInputInvocation);\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/text_input.dart", 845, 12, "() {\r\n      _instance._channel = newChannel..setMethodCallHandler(_instance._handleTextInputInvocation);\r\n      return true;\r\n    }()");
     }
     static attach(client, configuration) {
       if (!(client != null)) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/text_input.dart", 890, 12, "client != null");
@@ -14057,7 +14057,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
           if (!dart.test(text_input.TextInput._androidSupportedInputActions[$contains](inputAction))) dart.assertFailed("The requested TextInputAction \"" + dart.str(inputAction) + "\" is not supported on Android.", "org-dartlang-app:///packages/flutter/src/services/text_input.dart", 926, 11, "_androidSupportedInputActions.contains(inputAction)");
         }
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/text_input.dart", 914, 12, "() {\n      if (_kIsBrowser) {\n        // TODO(flutterweb): what makes sense here?\n        return true;\n      }\n      if (Platform.isIOS) {\n        assert(\n          _iOSSupportedInputActions.contains(inputAction),\n          'The requested TextInputAction \"$inputAction\" is not supported on iOS.',\n        );\n      } else if (Platform.isAndroid) {\n        assert(\n          _androidSupportedInputActions.contains(inputAction),\n          'The requested TextInputAction \"$inputAction\" is not supported on Android.',\n        );\n      }\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/services/text_input.dart", 914, 12, "() {\r\n      if (_kIsBrowser) {\r\n        // TODO(flutterweb): what makes sense here?\r\n        return true;\r\n      }\r\n      if (Platform.isIOS) {\r\n        assert(\r\n          _iOSSupportedInputActions.contains(inputAction),\r\n          'The requested TextInputAction \"$inputAction\" is not supported on iOS.',\r\n        );\r\n      } else if (Platform.isAndroid) {\r\n        assert(\r\n          _androidSupportedInputActions.contains(inputAction),\r\n          'The requested TextInputAction \"$inputAction\" is not supported on Android.',\r\n        );\r\n      }\r\n      return true;\r\n    }()");
       return true;
     }
     [_handleTextInputInvocation](methodCall) {
@@ -15088,7 +15088,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
         dart.throw(assertions.FlutterError.new(reason));
       }
       return true;
-    }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/scheduler/debug.dart", 59, 10, "() {\n    if (debugPrintBeginFrameBanner ||\n        debugPrintEndFrameBanner) {\n      throw FlutterError(reason);\n    }\n    return true;\n  }()");
+    }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/scheduler/debug.dart", 59, 10, "() {\r\n    if (debugPrintBeginFrameBanner ||\r\n        debugPrintEndFrameBanner) {\r\n      throw FlutterError(reason);\r\n    }\r\n    return true;\r\n  }()");
     return true;
   };
   dart.defineLazy(debug$, {
@@ -15251,7 +15251,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
           print.debugPrint("The reported device pressure " + dart.toString(event.pressure) + " is outside of the device pressure range where: " + dart.toString(event.pressureMin) + " <= pressure <= " + dart.toString(event.pressureMax));
         }
         let pressure = this.interpolation(event.pressureMin, event.pressureMax, event.pressure);
-        if (!(dart.notNull(pressure) >= 0.0 && dart.notNull(pressure) <= 1.0 || pressure[$isNaN])) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/force_press.dart", 246, 9, "(pressure >= 0.0 && pressure <= 1.0) || // Interpolated pressure must be between 1.0 and 0.0...\n        pressure.isNaN");
+        if (!(dart.notNull(pressure) >= 0.0 && dart.notNull(pressure) <= 1.0 || pressure[$isNaN])) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/force_press.dart", 246, 9, "(pressure >= 0.0 && pressure <= 1.0) || // Interpolated pressure must be between 1.0 and 0.0...\r\n        pressure.isNaN");
         this[_lastPosition$] = recognizer.OffsetPair.fromEventPosition(event);
         this[_lastPressure] = pressure;
         if (dart.equals(this[_state$], force_press._ForceState.possible)) {
@@ -17656,7 +17656,7 @@ define(['dart_sdk', 'packages/flutter/src/foundation/_bitfield_web', 'packages/v
       if (!dart.test(dart.fn(() => {
         this[_pendingDelta] = null;
         return true;
-      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/multidrag.dart", 166, 12, "() {\n      _pendingDelta = null;\n      return true;\n    }()");
+      }, VoidTobool())())) dart.assertFailed(null, "org-dartlang-app:///packages/flutter/src/gestures/multidrag.dart", 166, 12, "() {\r\n      _pendingDelta = null;\r\n      return true;\r\n    }()");
     }
   };
   (multidrag.MultiDragPointerState.new = function(initialPosition) {
